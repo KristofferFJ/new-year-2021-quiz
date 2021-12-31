@@ -48,6 +48,19 @@ def question_32_answer():
             word_count += len(line.split())
     return np.divide(word_count, year_count)
 
+def question_5_answer():
+    word1 = "Gud"
+    word2 = "gud"
+    # hvor mange af ord gennemsnitligt
+    year_count = 0
+    word_count = 0
+    for _year in years:
+        year_count += 1
+        _speech = read_speech(_year)
+        for line in _speech:
+            word_count += len(line.split())
+    return np.divide(word_count, year_count)
+
 
 if __name__ == '__main__':
-    print(question_2_answer())
+    print(question_32_answer())
